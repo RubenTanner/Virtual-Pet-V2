@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- links style sheet and script -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+    <title>Virtual Pet</title>
+  </head>
+  <body>
+    <!-- create an input field that takes the Pets name and the Owners name -->
+    <!-- create a button that creates the pet -->
+    <form id="start">
+      <div class="form-group">
+        <label for="name">Enter Your Pets Name:</label>
+        <input type="text" name="name" id="name" class="form-control" />
+        <label for="owner">And now your name:</label>
+        <input type="text" name="owner" id="owner" class="form-control" />
+        <!-- a button that calls the create pet function -->
+        <button
+          type="submit"
+          name="button"
+          class="btn btn-secondary"
+          id="create"
+        >
+          Create
+        </button>
+      </div>
+    </form>
+
+    <div id="stats">
+      <h1 id="name"></h1>
+      <h4>
+        Keep <span id="name"></span> alive by feeding it, playing with it, and
+        letting it sleep.
+      </h4>
+      <br />
+      <p>Hunger Level: <span id="hunger"></span></p>
+      <p>Play Level: <span id="happiness"></span></p>
+      <p>Sleep Level: <span id="sleepieness"></span></p>
+
+      <button id="eat" type="button" class="btn btn-success">Feed</button>
+      <button id="play" type="button" class="btn btn-info">Play</button>
+      <button id="sleep" type="button" class="btn btn-primary">Sleep</button>
+    </div>
+
+    <div id="dead">
+      <h1>Oh no, <span id="name"></span>died</h1>
+      <br />
+      <button id="reset" name="button" type="button" class="btn btn-secondary">
+        Play Again
+      </button>
+    </div>
+  </body>
+</html>
