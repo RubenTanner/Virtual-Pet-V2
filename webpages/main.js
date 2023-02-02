@@ -41,15 +41,15 @@ class Pet {
   //     happy = true;
   //   }
   // }
+
 }
 
 //init function
 function init() {
   //Add event listeners for the buttons on the page
-  document.getElementById("submit").addEventListener("click", () => {
+  document.querySelector("#submit").addEventListener("click", () => {
     playGame();
   });
-  document.getElementById("submit").addEventListener("click", playGame);
   document.querySelector("#eat").addEventListener("click", () => {
     feed();
   });
@@ -70,6 +70,7 @@ function playGame() {
     return;
   }
   let pet = new Pet(name, owner);
+  console.log(pet);
   // Update the pet's stats on the page
   document.querySelector("#name").innerHTML = pet.name;
   document.querySelector("#hunger").innerHTML = pet.hunger;

@@ -3,10 +3,7 @@ body {
     color: #696969;
     font-weight: bold;
   }
-  
-  #stats {
-    display: none;
-  }
+
   
   #dead {
     display: none;
