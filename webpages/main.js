@@ -28,19 +28,7 @@ class Pet {
     this.happiness += happiness;
   }
 
-  // // Method to get the pet's image based on its stats
-  // getImage() {
-  //   console.log("hello");
-  //   if (this.hunger <= 5) {
-  //     hungry = true;
-  //   } else if (this.sleep <= 5) {
-  //     sleepy = true;
-  //   } else if (this.happiness <= 5) {
-  //     bored = true;
-  //   } else {
-  //     happy = true;
-  //   }
-  // }
+}
 
 }
 
@@ -94,8 +82,6 @@ function feed() {
   document.querySelector("#hunger").innerHTML = pet.hunger;
   document.querySelector("#happiness").innerHTML = pet.happiness;
 
-  // // Update the pet's image on the page
-  // document.querySelector("#pet").src = pet.getImage();
 }
 
 // Function to put the pet to sleep
@@ -107,8 +93,6 @@ function sleep() {
   document.querySelector("#sleep").innerHTML = pet.sleep;
   document.querySelector("#happiness").innerHTML = pet.happiness;
 
-  // // Update the pet's image on the page
-  // document.querySelector("#pet").src = pet.getImage();
 }
 
 // Function to play with the pet
@@ -120,8 +104,6 @@ function play() {
   document.querySelector("#hunger").innerHTML = pet.hunger;
   document.querySelector("#happiness").innerHTML = pet.happiness;
 
-  // // Update the pet's image on the page
-  // document.querySelector("#pet").src = pet.getImage();
 }
 
 window.addEventListener("load", init);
