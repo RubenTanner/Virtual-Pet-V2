@@ -27,7 +27,7 @@ class Pet {
 
   // Method to update the pet's stats when the player interacts with the pet
   setUpdate(hunger, sleep, happiness) {
-    this.hunger -= hunger;
+    this.hunger += hunger;
     this.sleep += sleep;
     this.happiness += happiness;
   }
