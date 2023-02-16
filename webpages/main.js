@@ -16,9 +16,13 @@ class Pet {
 
   // Method to decrease the pet's stats over time
   setDecay() {
-    this.hunger += 1;
-    this.sleep -= 1;
-    this.happiness -= 1;
+    // loops over the stats decreasing them every 5 seconds
+    setInterval(() => {
+      this.hunger++;
+      this.sleep--;
+      this.happiness--;
+    }
+    , 2000);
   }
 
   // Method to update the pet's stats when the player interacts with the pet
