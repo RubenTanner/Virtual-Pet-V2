@@ -31,8 +31,8 @@ function init() {
 // Function to start the game
 function playGame() {
   // Create a new pet
-  let name = document.querySelector("#name").value;
-  let owner = document.querySelector("#owner").value;
+  const name = document.querySelector("#pet-name").value;
+  const owner = document.querySelector("#owner").value;
   if (name === "" || owner === "") {
     alert("Please enter a name and owner for your pet.");
     return;
@@ -40,11 +40,11 @@ function playGame() {
   let pet = new Pet(name, owner);
   console.log(pet);
   // Update the pet's stats on the page
-  document.querySelector("#name").innerHTML = pet.name;
-  document.querySelector("#hunger").innerHTML = pet.hunger;
-  document.querySelector("#sleep").innerHTML = pet.sleep;
-  document.querySelector("#happiness").innerHTML = pet.happiness;
-  setTimeout(() => {
+  document.querySelector("#pet-name").textContent = pet.name;
+  document.querySelector("#hunger").textContent = pet.hunger;
+  document.querySelector("#sleep").textContent = pet.sleep;
+  document.querySelector("#happiness").textContent = pet.happiness;
+  setTimeout(updatePet, 1000);
     if (pet.isAlive()) {
       pet.setDecay();
       pet.setUpdate();
@@ -59,8 +59,8 @@ function feed() {
   pet.setUpdate(-1, 0, 1);
 
   // Update the pet's stats on the page
-  document.querySelector("#hunger").innerHTML = pet.hunger;
-  document.querySelector("#happiness").innerHTML = pet.happiness;
+  document.querySelector("#hunger").textContent = pet.hunger;
+  document.querySelector("#happiness").textContent = pet.happiness;
 
 }
 
@@ -70,8 +70,8 @@ function sleep() {
   pet.setUpdate(0, 2, 1);
 
   // Update the pet's stats on the page
-  document.querySelector("#sleep").innerHTML = pet.sleep;
-  document.querySelector("#happiness").innerHTML = pet.happiness;
+  document.querySelector("#sleep").textContent = pet.sleep;
+  document.querySelector("#happiness").textContent = pet.happiness;
 
 }
 
@@ -81,8 +81,8 @@ function play() {
   pet.setUpdate(-1, 0, 3);
 
   // Update the pet's stats on the page
-  document.querySelector("#hunger").innerHTML = pet.hunger;
-  document.querySelector("#happiness").innerHTML = pet.happiness;
+  document.querySelector("#hunger").textContent = pet.hunger;
+  document.querySelector("#happiness").textContent = pet.happiness;
 
 }
 
