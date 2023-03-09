@@ -1,23 +1,30 @@
 body {
-    background-color: #EFEFEF;
-    color: #696969;
-    font-weight: bold;
-  }
+  background-color: #efefef;
+  color: #696969;
+  font-weight: bold;
+}
 
-  
-  #dead {
-    display: none;
+#dead {
+  display: none;
+}
+
+@keyframes breath {
+  0% {
+    transform: translate(-50%, -55%);
   }
-  
-  .jumbotron {
-    background-color: #CAEBF2;
-    text-align: center;
-    color: #A9A9A9;
-    font-weight: bolder;
-  
+  50% {
+    transform: translate(-50%, -45%);
   }
-  
-  .jumbotron h1 {
-    font-size: 75px;
-    font-family: Futura;
+  100% {
+    transform: translate(-50%, -55%);
   }
+}
+#petDiv {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
