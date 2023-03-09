@@ -5,4 +5,5 @@ const app = express();
 
 app.use(express.static("webpages"));
 
-app.listen(8080, () => console.log("listening on port 8080"));
+app.listen(8080);
+console.log("listening on port 8080")
