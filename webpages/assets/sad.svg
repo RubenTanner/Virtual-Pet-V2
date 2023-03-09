@@ -1,0 +1,20 @@
+<svg viewBox="0 0 150.68394 34.983944">
+    <g transform="translate(-59.69061,-101.99999)">
+        <ellipse
+            cx="95"
+            cy="109.49999"
+            rx="35"
+            ry="7.5" 
+        />
+        <ellipse
+            cx="175"
+            cy="109.49999"
+            rx="35"
+            ry="7.5" 
+        />
+        <path
+            style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;"
+            d="m 60.001318,135.95203 c 44.191062,-16.55822 90.338242,-27.51487 149.999852,0.22895"
+        />
+    </g>
+</svg>
