@@ -7,19 +7,20 @@
     <title>TannerGotchi</title>
   </head>
   <body>
-    <!-- create an input field that takes the Pets name and the Owners name -->
-    <!-- create a button that creates the pet -->
-    <label for="pet-name">Enter Your Pets Name:</label>
-    <input type="text" id="pet-name" class="form-control" />
-    <label for="owner">And now your name:</label>
-    <input type="text" name="owner" id="owner" class="form-control" />
-    <button type="submit" class="btn btn-secondary" id="submit">Create</button>
-
-    <div id="stats">
-      <h1 id="name"><span id="pet-name"></span></h1>
+    <div id="start">
+      <label for="pet-name">Enter Your Pet's Name:</label>
+      <input type="text" id="pet-name" class="form-control" />
+      <label for="owner">And now your name:</label>
+      <input type="text" id="owner" class="form-control" />
+      <button type="submit" class="btn btn-secondary" id="submit">
+        Create
+      </button>
+    </div>
+    <div id="stats" style="display: none;">
+      <h1 id="name"></h1>
       <h4>
-        Keep <span id="name"></span> alive by feeding it, playing with it, and
-        letting it sleep.
+        Hi <span id="owner-name"></span>! Keep <span id="pet-name-display"></span> alive by
+        feeding it, playing with it, and letting it sleep.
       </h4>
       <br />
       <p>Hunger Level: <span id="hunger"></span></p>
