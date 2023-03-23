@@ -2,20 +2,32 @@ import { Pet } from "./pet.js";
 let pet;
 let currentState;
 
+// Update the pet's image based on the current game state
 function updatePetImage() {
+  const petDiv = document.getElementById("pet-div");
   let imageSrc = "";
-  if (currentState === "feeding") {
-    imageSrc = "assets/eating.svg";
-  } else if ((currentState = "hungry")) {
-    imageSrc = "assets/hungry.svg";
-  } else if (currentState === "happy") {
-    imageSrc = "assets/happy.svg";
-  } else if (currentState === "sad") {
-    imageSrc = "assets/sad.svg";
-  } else if ((currentState = "playing")) {
-    imageSrc = "assets/playing.svg";
-  } else {
-    imageSrc = "assets/idle.svg";
+  switch (currentState) {
+    case "eating":
+      imageSrc = "assets/eating.svg";
+      break;
+    case "hungry":
+      imageSrc = "assets/hungry.svg";
+      break;
+    case "happy":
+      imageSrc = "assets/happy.svg";
+      break;
+    case "sad":
+      imageSrc = "assets/sad.svg";
+      break;
+    case "playing":
+      imageSrc = "assets/playing.svg";
+      break;
+    case "sleeping":
+      imageSrc = "assets/sleeping.svg";
+      break;
+    default:
+      imageSrc = "assets/idle.svg";
+      break;
   }
   petDiv.innerHTML = `<img src="${imageSrc}" alt="pet">`;
 }
