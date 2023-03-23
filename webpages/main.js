@@ -49,12 +49,9 @@ function init() {
 }
 // Function to start the game
 function playGame() {
-  currentState = "playing";
-  const petDiv = document.getElementById("pet-div");
-
   // Create a new pet
   const name = document.querySelector("#pet-name").value;
-  const owner = document.querySelector("#owner").value;
+  const owner = document.querySelector("#owner-name").value;
   if (name === "" || owner === "") {
     alert("Please enter a name and owner for your pet.");
     return;
@@ -67,6 +64,8 @@ function playGame() {
   document.querySelector("#hunger").textContent = pet.hunger;
   document.querySelector("#sleep").textContent = pet.sleep;
   document.querySelector("#happiness").textContent = pet.happiness;
+  // Show the stats div
+  document.getElementById("stats").style.display = "block";
 
    // Set a timer to update the pet's stats and image every second
    setInterval(() => {
