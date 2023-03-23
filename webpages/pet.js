@@ -3,14 +3,14 @@ export class Pet {
   constructor(name, owner) {
     this.name = name;
     this.owner = owner;
-    this.hunger = 0;
-    this.sleep = 10;
+    this.hunger = 5;
+    this.sleep = 5;
     this.happiness = 5;
+    this.alive = true;
   }
-
-  // Method to check if the pet is alive
+  // Check if the pet is alive or dead
   isAlive() {
-    return this.hunger < 10 && this.sleep > 0 && this.happiness > 0;
+    return this.hunger > 0 && this.sleep > 0 && this.happiness > 0;
   }
   // Set the pet's stats to decay over time
   setDecay() {
