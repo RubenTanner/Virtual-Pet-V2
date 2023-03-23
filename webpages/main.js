@@ -55,16 +55,22 @@ function playGame() {
   document.querySelector("#hunger").textContent = pet.hunger;
   document.querySelector("#sleep").textContent = pet.sleep;
   document.querySelector("#happiness").textContent = pet.happiness;
-  setTimeout(updatePet, 1000);
 
-  function updatePet() {
+   // Set a timer to update the pet's stats and image every second
+   setInterval(() => {
     if (pet.isAlive()) {
       pet.setDecay();
-      pet.setUpdate();
+      updatePetImage();
+      // Update the pet's stats on the page
+      document.querySelector("#hunger").textContent = pet.hunger;
+      document.querySelector("#sleep").textContent = pet.sleep;
+      document.querySelector("#happiness").textContent = pet.happiness;
     } else {
+      // If the pet is dead, stop the timer and show a message
+      clearInterval(timer);
       document.querySelector("#dead").textContent = "Your pet is dead!";
     }
-  }
+  }, 1000);
 }
 // Function to feed the pet
 function feed() {
