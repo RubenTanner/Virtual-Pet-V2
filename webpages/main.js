@@ -83,43 +83,39 @@ function playGame() {
     }
   }, 1000);
 }
-// Function to feed the pet
+// Feed the pet
 function feed() {
-  currentState = "feeding";
-  // Update the pet's hunger and happiness stats
-  pet.setUpdate(1, 0, 1);
-
-  // Update the pet's stats on the page
-  document.querySelector("#hunger").textContent = pet.hunger;
-  document.querySelector("#happiness").textContent = pet.happiness;
-
-  updatePetImage();
+  currentState = "eating";
+  pet.hunger += 2;
+  pet.happiness += 1;
+  if (pet.hunger > 8) {
+    currentState = "sad";
+  } else if (pet.hunger > 4) {
+    currentState = "happy";
+  }
 }
 
-// Function to put the pet to sleep
-function sleep() {
-  currentState = "sleeping";
-  // Update the pet's sleep and happiness stats
-  pet.setUpdate(0, 2, 1);
-
-  // Update the pet's stats on the page
-  document.querySelector("#sleep").textContent = pet.sleep;
-  document.querySelector("#happiness").textContent = pet.happiness;
-
-  updatePetImage();
-}
-
-// Function to play with the pet
 function play() {
   currentState = "playing";
-  // Update the pet's hunger and happiness stats
-  pet.setUpdate(-1, 0, 3);
+  pet.happiness += 3;
+  pet.hunger -= 1;
+  pet.sleep -= 1;
+  if (pet.happiness > 8) {
+    currentState = "happy";
+  } else {
+    currentState = "idle";
+  }
+}
 
-  // Update the pet's stats on the page
-  document.querySelector("#hunger").textContent = pet.hunger;
-  document.querySelector("#happiness").textContent = pet.happiness;
-
-  updatePetImage();
+function sleep() {
+  currentState = "sleeping";
+  pet.sleep += 2;
+  pet.happiness += 1;
+  if (pet.sleep > 8) {
+    currentState = "happy";
+  } else {
+    currentState = "idle";
+  }
 }
 
 // window.addEventListener("load", init);
