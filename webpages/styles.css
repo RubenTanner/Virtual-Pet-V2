@@ -20,6 +20,7 @@ body {
   }
 }
 #petDiv {
+  background-color: blue;
   width: 250px;
   height: 250px;
   position: absolute;
@@ -27,4 +28,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+}
+
+meter{
+  width: 400px;
+  float: left;
+  margin: 5px;
 }

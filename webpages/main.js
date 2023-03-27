@@ -51,7 +51,7 @@ function init() {
 function playGame() {
   // Create a new pet
   const name = document.querySelector("#pet-name").value;
-  const owner = document.querySelector("#owner-name").value;
+  const owner = document.querySelector("#owner").value;
   if (name === "" || owner === "") {
     alert("Please enter a name and owner for your pet.");
     return;
@@ -64,6 +64,10 @@ function playGame() {
   document.querySelector("#hunger").textContent = pet.hunger;
   document.querySelector("#sleep").textContent = pet.sleep;
   document.querySelector("#happiness").textContent = pet.happiness;
+  // debugger;
+  document.getElementById('hungerMeter').value = pet.hunger;
+  document.getElementById('sleepMeter').value = pet.sleep;
+  document.getElementById('happinessMeter').value = pet.happiness;
   // Show the stats div
   document.getElementById("stats").style.display = "block";
 
