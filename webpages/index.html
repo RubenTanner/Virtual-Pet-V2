@@ -15,6 +15,8 @@
       <button type="submit" class="btn btn-secondary" id="submit">
         Create
       </button>
+
+      <button id="reset-game" type="button" class="btn btn-secondary">Reset Game</button>
     </div>
     <div id="stats" style="display: none;">
       <h1 id="name"></h1>
@@ -24,28 +26,24 @@
       </h4>
       <br />
       <p>Hunger Level: <span id="hunger"></span></p>
-      <p>Play Level: <span id="happiness"></span></p>
+      <p>Happiness Level: <span id="happiness"></span></p>
       <p>Sleep Level: <span id="sleep"></span></p>
+      <p>Cleanliness Level: <span id="cleanliness"></span></p>
       <div id="meterBox" hidden>
         <meter id="hungerMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
         <meter id="happinessMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
         <meter id="sleepMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
+        <meter id="cleanlinessMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
       </div>
 
       <button id="eat" type="button" class="btn btn-success">Feed</button>
       <button id="play" type="button" class="btn btn-info">Play</button>
-      <button id="rest" type="button" class="btn btn-primary">Sleep</button>
+      <button id="sleep" type="button" class="btn btn-primary">Sleep</button>
+      <button id="clean" type="button" class="btn btn-warning">Clean</button>
     </div>
-    <!-- TODO: FINISH PET DIV LOGIC -->
     <div id="pet-div"></div>
-
-    <div id="dead">
-      <!-- TODO: FIX SPAN SO IT DISPLAYS PET NAME -->
-      <h1>Oh no, <span id="name"></span>died</h1>
-      <br />
-      <button id="reset" name="button" type="button" class="btn btn-secondary">
-        Play Again
-      </button>
+    <div id="dead" style="display: none";>
+      <h1>Oh no, <span id="name"></span> died</h1>
     </div>
   </body>
 </html>
