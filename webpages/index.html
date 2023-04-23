@@ -15,14 +15,13 @@
       <button type="submit" class="btn btn-secondary" id="submit">
         Create
       </button>
-
-      <button id="reset-game" type="button" class="btn btn-secondary">Reset Game</button>
     </div>
-    <div id="stats" style="display: none;">
+    <div id="stats" style="display: none">
       <h1 id="name"></h1>
       <h4>
-        Hi <span id="owner"></span>! Keep <span id="pet-name-display"></span> alive by
-        feeding it, playing with it, and letting it sleep.
+        Hi <span id="owner"></span>! Keep
+        <span id="pet-name-display"></span> alive by feeding it, playing with
+        it, and letting it sleep.
       </h4>
       <br />
       <p>Hunger Level: <span id="hunger"></span></p>
@@ -30,20 +29,54 @@
       <p>Sleep Level: <span id="sleep"></span></p>
       <p>Cleanliness Level: <span id="cleanliness"></span></p>
       <div id="meterBox" hidden>
-        <meter id="hungerMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
-        <meter id="happinessMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
-        <meter id="sleepMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
-        <meter id="cleanlinessMeter" min="0" max="100" low="25" high="75" optimum="100" value="90"></meter>
+        <meter
+          id="hungerMeter"
+          min="0"
+          max="100"
+          low="25"
+          high="75"
+          optimum="100"
+          value="90"
+        ></meter>
+        <meter
+          id="happinessMeter"
+          min="0"
+          max="100"
+          low="25"
+          high="75"
+          optimum="100"
+          value="90"
+        ></meter>
+        <meter
+          id="sleepMeter"
+          min="0"
+          max="100"
+          low="25"
+          high="75"
+          optimum="100"
+          value="90"
+        ></meter>
+        <meter
+          id="cleanlinessMeter"
+          min="0"
+          max="100"
+          low="25"
+          high="75"
+          optimum="100"
+          value="90"
+        ></meter>
       </div>
 
       <button id="eat" type="button" class="btn btn-success">Feed</button>
       <button id="play" type="button" class="btn btn-info">Play</button>
-      <button id="sleep" type="button" class="btn btn-primary">Sleep</button>
+      <button id="bed" type="button" class="btn btn-primary">Sleep</button>
       <button id="clean" type="button" class="btn btn-warning">Clean</button>
     </div>
     <div id="pet-div"></div>
-    <div id="dead" style="display: none";>
-      <h1>Oh no, <span id="name"></span> died</h1>
+    <div id="dead" style="display: none" ;>
+      <h1>Oh no, <span id="pet-name"></span> died</h1>
+      <!-- displays the counter for how long pet was alive -->
+      <h4>They lived for <span id="counter"></span> seconds</h4>
     </div>
   </body>
 </html>

@@ -21,11 +21,11 @@ meter {
   margin: 5px;
 }
 
-.breath{
+.breath {
   animation: breath 5s infinite linear;
 }
 
-.eating{
+.eating {
   animation: eating 1s infinite linear;
 }
 
